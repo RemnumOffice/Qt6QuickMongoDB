@@ -49,7 +49,7 @@ Component.onCompleted: {
    Function name :
             disConnectDB();
    usages:
-          to connect database 
+          to disconnect database 
    return values:
            no return value
 -----------------------------------------------------------------------           
@@ -61,12 +61,25 @@ Component.onCompleted: {
           document : json object
           opts : json object
    return values:
-           return bool value
            true  for success 
            false for error
 -----------------------------------------------------------------------           
 
-    bool updateOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
+    bool updateOne( dbStr, collectionStr,  selector,  update, opts);
+    
+       Function name :
+            updateOne(database name  ,collection name  ,selector,  update, opts)
+   usages:
+          database name : string 
+          collection name : string
+          document : json object
+          
+          opts : json object
+   return values:
+           true  for success 
+           false for error
+-----------------------------------------------------------------------   
+    
     bool updateMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
 
     bool deleteOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
