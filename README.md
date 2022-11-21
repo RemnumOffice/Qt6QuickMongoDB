@@ -37,7 +37,34 @@ Component.onCompleted: {
 }
 
 all functions :
-    bool insertOne(QString dbStr,QString collectionStr,QJSValue document,QJSValue opts);
+-----------------------------------------------------------------------           
+   Function name :
+            connectDB();
+   usages:
+          to connect database 
+   return values:
+           no return value
+           
+-----------------------------------------------------------------------           
+   Function name :
+            disConnectDB();
+   usages:
+          to connect database 
+   return values:
+           no return value
+-----------------------------------------------------------------------           
+   Function name :
+            insertOne(database name  ,collection name  ,document  ,opts);
+   usages:
+          database name : string 
+          collection name : string
+          document : json object
+          opts : json object
+   return values:
+           return bool value
+           true  for success 
+           false for error
+-----------------------------------------------------------------------           
 
     bool updateOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
     bool updateMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
