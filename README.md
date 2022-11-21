@@ -36,7 +36,7 @@ Component.onCompleted: {
   
 }
 
-all functions :
+#all functions
 -----------------------------------------------------------------------           
    Function name :
             connectDB();
