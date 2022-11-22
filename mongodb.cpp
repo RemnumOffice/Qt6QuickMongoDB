@@ -15,7 +15,6 @@ MongoDB::~MongoDB()
     delete _json_engine;
     mongoc_client_destroy(_client);
     mongoc_cleanup();
-
 }
 
 void MongoDB::setUri(QString u)
@@ -31,6 +30,8 @@ QString MongoDB::uri()
 
 bool MongoDB::insertOne(QString dbStr, QString collectionStr,QJSValue document,QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_document = nullptr;
     bson_t *bson_opts = nullptr;
@@ -59,6 +60,8 @@ bool MongoDB::insertOne(QString dbStr, QString collectionStr,QJSValue document,Q
 
 bool MongoDB::updateOne(QString dbStr, QString collectionStr, QJSValue selector, QJSValue update, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_selector = nullptr;
     bson_t *bson_update = nullptr;
@@ -92,6 +95,8 @@ bool MongoDB::updateOne(QString dbStr, QString collectionStr, QJSValue selector,
 
 bool MongoDB::updateMany(QString dbStr, QString collectionStr, QJSValue selector, QJSValue update, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_selector = nullptr;
     bson_t *bson_update = nullptr;
@@ -122,6 +127,8 @@ bool MongoDB::updateMany(QString dbStr, QString collectionStr, QJSValue selector
 
 bool MongoDB::deleteOne(QString dbStr, QString collectionStr, QJSValue selector, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_selector = nullptr;
     bson_t *bson_opts = nullptr;
@@ -147,6 +154,8 @@ bool MongoDB::deleteOne(QString dbStr, QString collectionStr, QJSValue selector,
 
 bool MongoDB::deleteMany(QString dbStr, QString collectionStr, QJSValue selector, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_selector = nullptr;
     bson_t *bson_opts = nullptr;
@@ -172,6 +181,8 @@ bool MongoDB::deleteMany(QString dbStr, QString collectionStr, QJSValue selector
 
 bool MongoDB::replaceOne(QString dbStr, QString collectionStr, QJSValue selector, QJSValue replancement, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_selector = nullptr;
     bson_t *bson_replancement = nullptr;
@@ -203,6 +214,8 @@ bool MongoDB::replaceOne(QString dbStr, QString collectionStr, QJSValue selector
 
 QVariant MongoDB::findOne(QString dbStr, QString collectionStr, QJSValue filter, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_filter = nullptr;
     bson_t *bson_opts = nullptr;
@@ -241,6 +254,8 @@ QVariant MongoDB::findOne(QString dbStr, QString collectionStr, QJSValue filter,
 
 QVariant MongoDB::find(QString dbStr, QString collectionStr,  QJSValue filter,QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_filter = nullptr;
     bson_t *bson_opts = nullptr;
@@ -279,6 +294,8 @@ QVariant MongoDB::find(QString dbStr, QString collectionStr,  QJSValue filter,QJ
 
 int MongoDB::count(QString dbStr, QString collectionStr, QJSValue filter, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_filter = nullptr;
     bson_t *bson_opts = nullptr;
@@ -307,6 +324,8 @@ int MongoDB::count(QString dbStr, QString collectionStr, QJSValue filter, QJSVal
 
 QVariant MongoDB::aggregate(QString dbStr, QString collectionStr, QJSValue pipeline, QJSValue opts)
 {
+    if(!_connection_status)
+        return false;
     bson_error_t error;
     bson_t *bson_pipeline = nullptr;
     bson_t *bson_opts = nullptr;

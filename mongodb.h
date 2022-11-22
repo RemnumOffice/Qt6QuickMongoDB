@@ -6,8 +6,8 @@
 #include <QJsonDocument>
 #include <QJSEngine>
 
-#include <bson/bson.h>
 #include <mongoc/mongoc.h>
+#include <bson/bson.h>
 
 class MongoDB : public QObject
 {

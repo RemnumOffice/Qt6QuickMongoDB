@@ -1,5 +1,11 @@
 cmake_minimum_required (VERSION 3.1)
 
+if(ANDROID)
+set (OPENSSL_CRYPTO_LIBRARY /home/polto/Android/Sdk/android_openssl/latest/arm/libcrypto_1_1.so)
+set (OPENSSL_SSL_LIBRARY /home/polto/Android/Sdk/android_openssl/latest/arm/libssl_1_1.so)
+set (OPENSSL_INCLUDE_DIR /home/polto/Android/Sdk/android_openssl/static/include)
+endif()
+
 set (ENABLE_SSL AUTO CACHE STRING
    "Enable TLS connections and SCRAM-SHA-1 authentication. Options are
    \"DARWIN\" to use Apple's Secure Transport, \"WINDOWS\" to use Windows
@@ -21,6 +27,10 @@ set (ENABLE_STATIC OFF)
 set (ENABLE_STATIC_BUILD OFF)
 set (ENABLE_TESTS OFF)
 set (ENABLE_ICU OFF)
+if(ANDROID)
+set (ENABLE_SSL OFF)
+endif()
+
 #######################33
 
 option (ENABLE_TESTS "Build MongoDB C Driver tests." OFF)
