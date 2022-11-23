@@ -49,33 +49,148 @@ import QtQuick.MongoDB
 ```
 
 
-##### 3 . Component 
-```
-Component.onCompleted: {
-  mongo.connectDB()
-  var obj= {
-    "name" : "user",
-    "age" : 30
-    }
-```
-
-
-
-
-#####  4 . Insert One 
-```
-  mongo.insertOne("database","users",obj,{})
-  // where :
-  // database -> is database name
-  // users    -> is collection name
-  // obj      -> object nedded to insert
-  // {}       -> options
-  
-}
-```
 ## All Functions
 
 
+##### 1 .  Function name : connectDB();
+ 
+
+```
+   usages:
+          to connect database 
+   return values:
+           no return value
+```
+
+##### 2 .  Function name : disConnectDB();
+ 
+
+```
+   usages:
+          to disconnect database 
+   return values:
+           no return value
+```
+
+
+##### 3 .  Function name : insertOne();
+ 
+
+```
+   insertOne(database name  ,collection name  ,document  ,opts);
+   usages:
+          database name : string 
+          collection name : string
+          document : json object
+          opts : json object
+   return values:
+           true  for success 
+           false for error
+```
+
+
+##### 4 .  Function name updateOne(): 
+ 
+
+```
+    bool updateOne( dbStr, collectionStr,  selector,  update, opts);
+    updateOne(database name  ,collection name  ,selector,  update, opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          document : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+
+```
+
+
+##### 5 .  Function name updateMany(): 
+ 
+
+```
+    bool updateMany( dbStr collectionStr selector, update, opts);
+    updateMany(database name  ,collection name  ,selector,  update, opts)
+
+    
+   usages:
+          database name : string 
+          collection name : string
+          selector : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+
+```
+
+##### 6 .  Function name deleteOne(): 
+ 
+
+```
+bool deleteOne( dbStr collectionStr selector, opts);
+    deleteOne(database name  ,collection name  ,selector, opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          selector : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+```
+
+##### 7 .  Function name deleteMany(): 
+ 
+
+```
+    bool deleteMany( dbStr , collectionStr , selector , opts);
+    deleteMany(database name  ,collection name  ,selector, opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          selector : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+
+```
+
+
+
+
+##### 8 .  Function name replaceOne(): 
+ 
+
+```
+    bool replaceOne( dbStr , collectionStr , selector , update , opts);
+    replaceOne(database name  ,collection name  ,selector, update , opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          selector : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+```
 
 
 
@@ -83,7 +198,98 @@ Component.onCompleted: {
 
 
 
+##### 9 .  Function name findOne(): 
+ 
 
+```
+    QVariant findOne( dbStr, collectionStr,  filter, opts);
+    findOne(database name  ,collection name  ,selector, update , opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          selector : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+```
+
+
+
+
+##### 10 .  Function name find(): 
+ 
+
+```   
+   QVariant find( dbStr, collectionStr,  filter, opts);
+   find(database name  ,collection name  ,filter , opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          filter : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+
+```
+
+
+
+
+##### 11 .  Function name count(): 
+ 
+
+```
+    int count( dbStr, collectionStr,  filter, opts);
+    count(database name  ,collection name  ,filter , opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          filter : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+
+```
+
+
+
+##### 12 .  Function name aggregate(): 
+ 
+
+```
+    QVariant aggregate( dbStr, collectionStr,  pipeline, opts);
+    aggregate(database name  ,collection name  ,pipeline , opts)
+    
+   usages:
+          database name : string 
+          collection name : string
+          pipeline : json object
+          opts : json object
+          
+   return values:
+           true  for success 
+           false for error
+
+```
+
+##### 13 .  Function name :  void connectDB(); 
+ 
+
+
+##### 14 .  Function name:  void disConnectDB();
+ 
 
 
 
@@ -144,56 +350,14 @@ Component.onCompleted: {
 
 #all functions
 -----------------------------------------------------------------------           
-   Function name :
-            connectDB();
-   usages:
-          to connect database 
-   return values:
-           no return value
-           
------------------------------------------------------------------------           
-   Function name :
-            disConnectDB();
-   usages:
-          to disconnect database 
-   return values:
-           no return value
------------------------------------------------------------------------           
-   Function name :
-            insertOne(database name  ,collection name  ,document  ,opts);
-   usages:
-          database name : string 
-          collection name : string
-          document : json object
-          opts : json object
-   return values:
-           true  for success 
-           false for error
 -----------------------------------------------------------------------           
 
-    bool updateOne( dbStr, collectionStr,  selector,  update, opts);
-    
-       Function name :
-            updateOne(database name  ,collection name  ,selector,  update, opts)
-   usages:
-          database name : string 
-          collection name : string
-          document : json object
-          
-          opts : json object
-   return values:
-           true  for success 
-           false for error
 -----------------------------------------------------------------------   
     
-    bool updateMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
-
-    bool deleteOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
-    bool deleteMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
 
 
 
-    bool replaceOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
+
 
 
     QVariant findOne(QString dbStr,QString collectionStr, QJSValue filter,QJSValue opts);
