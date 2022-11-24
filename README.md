@@ -58,10 +58,13 @@ import QtQuick.MongoDB
    connectDB()
    
    usage :
-          to connect database 
+          to connect database.
+          
+   parameters : 
+          no parameters.
           
    return :
-           no return value
+           no return value.
 ```
 
 ##### 2 .  Function name : disConnectDB
@@ -70,10 +73,13 @@ import QtQuick.MongoDB
    disConnectDB()
    
    usage :
-          to disconnect database 
-          
+          to disconnect database.
+   
+   parameters : 
+          no parameters.
+   
    return :
-           no return value
+          no return value.
 ```
 
 
@@ -83,14 +89,17 @@ import QtQuick.MongoDB
    insertOne(database name  ,collection name  ,document  ,opts);
    
    usage :
-          database name : string 
-          collection name : string
-          document : json object
-          opts : json object
+        to insert one document into [ database name/collection name ].
+        
+   parameters : 
+          database name : string .
+          collection name : string .
+          document : json object .
+          opts : json object .
           
    return :
-          true  for success 
-          false for error
+          true  for success.
+          false for error.
 ```
 
 ##### 4 .  Function name : updateOne
@@ -99,30 +108,38 @@ import QtQuick.MongoDB
    updateOne(database name  ,collection name  ,selector,  update, opts)
     
    usage :
-          database name : string 
-          collection name : string
-          document : json object
-          opts : json object
+        to update one document from [ database name/collection name ].
+        
+   parameters : 
+          database name : string .
+          collection name : string .
+          selector : json object .
+          update : json object .
+          opts : json object .
           
    return  :
-           true  for success 
-           false for error
+           true  for success.
+           false for error.
 ```
 
 ##### 5 .  Function name : updateMany
 
 ```
    updateMany(database name  ,collection name  ,selector,  update, opts)
-
+   
    usage :
-          database name : string 
-          collection name : string
-          selector : json object
-          opts : json object
+        to update many documents from [ database name/collection name ].
+        
+   parameters : 
+          database name : string .
+          collection name : string .
+          selector : json object .
+          update : json object .
+          opts : json object .
           
    return :
-           true  for success 
-           false for error
+           true  for success.
+           false for error.
 ```
 
 ##### 6 .  Function name : deleteOne 
@@ -131,14 +148,17 @@ import QtQuick.MongoDB
    deleteOne(database name  ,collection name  ,selector, opts)
     
    usage :
-          database name : string 
-          collection name : string
-          selector : json object
-          opts : json object
+        to delete one document from [ database name/collection name ].
+        
+   parameters : 
+          database name : string .
+          collection name : string .
+          selector : json object .
+          opts : json object .
           
    return :
-           true  for success 
-           false for error
+           true  for success.
+           false for error.
 ```
 
 ##### 7 .  Function name : deleteMany
@@ -147,14 +167,17 @@ import QtQuick.MongoDB
    deleteMany(database name  ,collection name  ,selector, opts)
     
    usage :
-          database name : string 
-          collection name : string
-          selector : json object
-          opts : json object
+        to delete many documents from [ database name/collection name ].
+        
+   parameters :
+          database name : string .
+          collection name : string .
+          selector : json object .
+          opts : json object .
           
    return :
-           true  for success 
-           false for error
+           true  for success.
+           false for error.
 ```
 
 ##### 8 .  Function name : replaceOne
@@ -163,14 +186,18 @@ import QtQuick.MongoDB
    replaceOne(database name  ,collection name  ,selector, update , opts)
     
    usage :
-          database name : string 
-          collection name : string
-          selector : json object
-          opts : json object
+        to replace one document from [ database name/collection name ].
+        
+   parameters : 
+          database name : string .
+          collection name : string .
+          selector : json object .
+          update : json object .
+          opts : json object .
           
    return :
-           true  for success 
-           false for error
+           true  for success.
+           false for error.
 ```
 
 ##### 9 .  Function name : findOne
@@ -179,6 +206,9 @@ import QtQuick.MongoDB
     findOne(database name  ,collection name  ,selector, update , opts)
     
    usage :
+        to find one document from [ database name/collection name ].
+        
+   parameters :
           database name : string 
           collection name : string
           selector : json object
@@ -237,56 +267,20 @@ import QtQuick.MongoDB
 ```
 
 
-<!-- Installation : Open As Normal Project From Qtcreator and use build all to install it
- -->
-
-<!-- this is a c++/qml plugin for Qt6
-tested on linux ubuntu
-installation :
-open as normal project from qtcreator
-and us build all to install it
-
-after installation you can use it from any qml resource file 
-usage:
-
-import QtQuick.MongoDB
-
-    MongoDB{
-        id:mongo
-        uri: "mongodb://localhost:27017/"
-        onMongoMessage:(msg)=>{
-                           console.log(msg)
-                       }
-    }
 
 
-// can used from any js code inside the qml js blocks
-Component.onCompleted: {
-  mongo.connectDB()
-  var obj= {
-    "name" : "user",
-    "age" : 30
-    }
-    
-  mongo.insertOne("database","users",obj,{})
-  // where :
-  // database -> is database name
-  // users    -> is collection name
-  // obj      -> object nedded to insert
-  // {}       -> options
-  
-}
+<!--
+    bool insertOne(QString dbStr,QString collectionStr,QJSValue document,QJSValue opts);
 
-#all functions
------------------------------------------------------------------------           
------------------------------------------------------------------------           
+    bool updateOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
+    bool updateMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
 
------------------------------------------------------------------------   
-    
+    bool deleteOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
+    bool deleteMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
 
 
 
-
+    bool replaceOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
 
 
     QVariant findOne(QString dbStr,QString collectionStr, QJSValue filter,QJSValue opts);
@@ -298,4 +292,5 @@ Component.onCompleted: {
 
     void connectDB();
     void disConnectDB();
- -->
+
+-->
