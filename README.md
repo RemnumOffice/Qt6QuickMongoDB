@@ -36,7 +36,7 @@ Open As Normal Project From Qtcreator And Use Build All To Install It
 import QtQuick.MongoDB
  ```
 
-##### 2 . Mongodb Connection Function 
+##### 2 . Mongodb Qml Object 
 ```
     MongoDB{
         id:mongo
@@ -52,260 +52,189 @@ import QtQuick.MongoDB
 ## All Functions
 
 
-##### 1 .  Function name : connectDB();
- 
+##### 1 .  Function name : connectDB
 
 ```
-   usages:
+   connectDB()
+   
+   usage :
           to connect database 
-   return values:
+          
+   return :
            no return value
 ```
 
-##### 2 .  Function name : disConnectDB();
+##### 2 .  Function name : disConnectDB
  
-
 ```
-   usages:
+   disConnectDB()
+   
+   usage :
           to disconnect database 
-   return values:
+          
+   return :
            no return value
 ```
 
 
-##### 3 .  Function name : insertOne();
+##### 3 .  Function name : insertOne
  
-
 ```
    insertOne(database name  ,collection name  ,document  ,opts);
-   usages:
-          database name : string 
-          collection name : string
-          document : json object
-          opts : json object
-   return values:
-           true  for success 
-           false for error
-```
-
-
-##### 4 .  Function name updateOne(): 
- 
-
-```
-    bool updateOne( dbStr, collectionStr,  selector,  update, opts);
-    updateOne(database name  ,collection name  ,selector,  update, opts)
-    
-   usages:
+   
+   usage :
           database name : string 
           collection name : string
           document : json object
           opts : json object
           
-   return values:
+   return :
+          true  for success 
+          false for error
+```
+
+##### 4 .  Function name : updateOne
+ 
+```
+   updateOne(database name  ,collection name  ,selector,  update, opts)
+    
+   usage :
+          database name : string 
+          collection name : string
+          document : json object
+          opts : json object
+          
+   return  :
            true  for success 
            false for error
-
-
 ```
 
-
-##### 5 .  Function name updateMany(): 
- 
+##### 5 .  Function name : updateMany
 
 ```
-    bool updateMany( dbStr collectionStr selector, update, opts);
-    updateMany(database name  ,collection name  ,selector,  update, opts)
+   updateMany(database name  ,collection name  ,selector,  update, opts)
 
-    
-   usages:
+   usage :
           database name : string 
           collection name : string
           selector : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
-
 ```
 
-##### 6 .  Function name deleteOne(): 
- 
+##### 6 .  Function name : deleteOne 
 
 ```
-bool deleteOne( dbStr collectionStr selector, opts);
-    deleteOne(database name  ,collection name  ,selector, opts)
+   deleteOne(database name  ,collection name  ,selector, opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           selector : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
 ```
 
-##### 7 .  Function name deleteMany(): 
- 
+##### 7 .  Function name : deleteMany
 
 ```
-    bool deleteMany( dbStr , collectionStr , selector , opts);
-    deleteMany(database name  ,collection name  ,selector, opts)
+   deleteMany(database name  ,collection name  ,selector, opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           selector : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
-
 ```
 
-
-
-
-##### 8 .  Function name replaceOne(): 
+##### 8 .  Function name : replaceOne
  
-
 ```
-    bool replaceOne( dbStr , collectionStr , selector , update , opts);
-    replaceOne(database name  ,collection name  ,selector, update , opts)
+   replaceOne(database name  ,collection name  ,selector, update , opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           selector : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
 ```
 
-
-
-
-
-
-
-##### 9 .  Function name findOne(): 
+##### 9 .  Function name : findOne
  
-
 ```
-    QVariant findOne( dbStr, collectionStr,  filter, opts);
     findOne(database name  ,collection name  ,selector, update , opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           selector : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
 ```
-
-
-
-
-##### 10 .  Function name find(): 
+##### 10 .  Function name : find
  
-
 ```   
-   QVariant find( dbStr, collectionStr,  filter, opts);
    find(database name  ,collection name  ,filter , opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           filter : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
-
 ```
 
-
-
-
-##### 11 .  Function name count(): 
+##### 11 .  Function name : count
  
-
 ```
-    int count( dbStr, collectionStr,  filter, opts);
-    count(database name  ,collection name  ,filter , opts)
+   count(database name  ,collection name  ,filter , opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           filter : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
-
 ```
 
-
-
-##### 12 .  Function name aggregate(): 
+##### 12 .  Function name : aggregate
  
-
 ```
-    QVariant aggregate( dbStr, collectionStr,  pipeline, opts);
-    aggregate(database name  ,collection name  ,pipeline , opts)
+   aggregate(database name  ,collection name  ,pipeline , opts)
     
-   usages:
+   usage :
           database name : string 
           collection name : string
           pipeline : json object
           opts : json object
           
-   return values:
+   return :
            true  for success 
            false for error
-
 ```
-
-##### 13 .  Function name :  void connectDB(); 
- 
-
-
-##### 14 .  Function name:  void disConnectDB();
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- Installation : Open As Normal Project From Qtcreator and use build all to install it
