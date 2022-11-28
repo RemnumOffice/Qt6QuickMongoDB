@@ -72,7 +72,7 @@ import QtQuick.MongoDB
  
 ```
    usage :
-     disConnectDB()
+          disConnectDB()
    
    description :
           to disconnect database.
@@ -284,5 +284,3 @@ import QtQuick.MongoDB
 
 * #### Project Link: (https://github.com/RemnumOffice/Qt6QuickMongoDB)
 
-
-_
