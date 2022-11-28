@@ -1,4 +1,4 @@
-  <h2> Qt6QuickMongoDB </h2>
+_  <h2> Qt6QuickMongoDB </h2>
 
 
 
@@ -88,11 +88,9 @@ import QtQuick.MongoDB
 ##### 3 .  Function name : insertOne
  
 ```
-   usage :
-   insertOne(database name  ,collection name  ,document  ,opts);
+   usage : insertOne(database name  ,collection name  ,document  ,opts);
    
-   description :
-        to insert one document into [ database name/collection name ].
+   description : to insert one document into [ database name/collection name ].
         
    parameters : 
           database name : string .
@@ -108,11 +106,9 @@ import QtQuick.MongoDB
   ##### 4 .  Function name : updateOne
  
 ```
-   usage :
-   updateOne(database name  ,collection name  ,selector,  update, opts)
+   usage : updateOne(database name  ,collection name  ,selector,  update, opts)
     
-   description :
-        to update one document from [ database name/collection name ].
+   description : to update one document from [ database name/collection name ].
         
    parameters : 
           database name : string .
@@ -129,12 +125,10 @@ import QtQuick.MongoDB
 ##### 5 .  Function name : updateMany
 
 ```
-   usage :
-   updateMany(database name  ,collection name  ,selector,  update, opts)
+   usage : updateMany(database name  ,collection name  ,selector,  update, opts)
 
    
-   description :
-        to update many documents from [ database name/collection name ].
+   description : to update many documents from [ database name/collection name ].
         
    parameters : 
           database name : string .
@@ -151,11 +145,9 @@ import QtQuick.MongoDB
 ##### 6 .  Function name : deleteOne 
 
 ```
-   usage :
-   deleteOne(database name  ,collection name  ,selector, opts)
+   usage : deleteOne(database name  ,collection name  ,selector, opts)
     
-   description :
-        to delete one document from [ database name/collection name ].
+   description : to delete one document from [ database name/collection name ].
         
    parameters : 
           database name : string .
@@ -171,11 +163,9 @@ import QtQuick.MongoDB
 ##### 7 .  Function name : deleteMany
 
 ```
-   usage :
-   deleteMany(database name  ,collection name  ,selector, opts)
+   usage : deleteMany(database name  ,collection name  ,selector, opts)
     
-   description :
-        to delete many documents from [ database name/collection name ].
+   description : to delete many documents from [ database name/collection name ].
         
    parameters :
           database name : string .
@@ -191,11 +181,9 @@ import QtQuick.MongoDB
 ##### 8 .  Function name : replaceOne
  
 ```
-    usage :
-  replaceOne(database name  ,collection name  ,selector, update , opts)
+   usage : replaceOne(database name  ,collection name  ,selector, update , opts)
     
-   description :
-        to replace one document from [ database name/collection name ].
+   description :to replace one document from [ database name/collection name ].
         
    parameters : 
           database name : string .
@@ -212,12 +200,10 @@ import QtQuick.MongoDB
 ##### 9 .  Function name : findOne
  
 ```
-   usage :
-    findOne(database name  ,collection name  ,filter , opts)
+   usage : findOne(database name  ,collection name  ,filter , opts)
 
     
-   description :
-        to find one document from [ database name/collection name ].
+   description : to find one document from [ database name/collection name ].
         
    parameters :
           database name : string 
@@ -232,8 +218,7 @@ import QtQuick.MongoDB
 ##### 10 .  Function name : find
  
 ```   
-   usage :
-   find(database name  ,collection name  ,filter , opts)
+   usage : find(database name  ,collection name  ,filter , opts)
     
    description : to find all documents from [ database name/collection name ].
 
@@ -252,8 +237,7 @@ import QtQuick.MongoDB
 ##### 11 .  Function name : count
  
 ```
-   usage :
-   count(database name  ,collection name  ,filter , opts)
+   usage : count(database name  ,collection name  ,filter , opts)
 
     
    description : count  all documents numbers from [ database name/collection name ].
@@ -272,11 +256,10 @@ import QtQuick.MongoDB
 ##### 12 .  Function name : aggregate
  
 ```
-   usage :
-   aggregate(database name  ,collection name  ,pipeline , opts)
+   usage :  aggregate(database name  ,collection name  ,pipeline , opts)
 
     
-   description : aggregation pipeline consists of stages and each stage transforms the document. Or in other words, the aggregation pipeline is a multi stage pipeline
+   description : aggregation pipeline consists of stages and each stage transforms the document. Or in other words, the aggregation pipeline is a multi tage pipeline
    
    parameters:
           database name : string 
@@ -306,3 +289,4 @@ import QtQuick.MongoDB
 * #### Project Link: (https://github.com/RemnumOffice/Qt6QuickMongoDB)
 
 
+_
