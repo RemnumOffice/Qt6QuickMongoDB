@@ -276,7 +276,7 @@ import QtQuick.MongoDB
    aggregate(database name  ,collection name  ,pipeline , opts)
 
     
-   description :	[Markdown - [Link](http://mongoc.org/libmongoc/1.12.0/aggregate.html)](#http://mongoc.org/libmongoc/1.12.0/aggregate.html) 
+   description : 
    parameters:
           database name : string 
           collection name : string
@@ -287,21 +287,21 @@ import QtQuick.MongoDB
            true  for success 
            false for error
 ```
-
+##### See More About Aggregate [here]([myLib/README.md](https://github.com/RemnumOffice/Qt6QuickMongoDB/edit/main/README.md))
 
 
 ## Contact
 
-Ahmed El Banna  - ahbanna@gmail.com
+* #### Ahmed El Banna  - ahbanna@gmail.com
 
-Linkedin : (https://www.linkedin.com/in/ahmed-el-banna-3a30324b)
-
-
-Abdalla yahya - abdallayahya158@gmail.com
-
-Linkedin : (https://www.linkedin.com/in/abdalla-yahya-560a861b7/)
+* #### Linkedin : (https://www.linkedin.com/in/ahmed-el-banna-3a30324b)
 
 
-Project Link: (https://github.com/RemnumOffice/Qt6QuickMongoDB)
+* #### Abdalla yahya - abdallayahya158@gmail.com
+
+* #### Linkedin : (https://www.linkedin.com/in/abdalla-yahya-560a861b7/)
+
+
+* #### Project Link: (https://github.com/RemnumOffice/Qt6QuickMongoDB)
 
 
