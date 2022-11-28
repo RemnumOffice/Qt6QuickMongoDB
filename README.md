@@ -126,7 +126,6 @@ import QtQuick.MongoDB
 
 ```
    usage : updateMany(database name  ,collection name  ,selector,  update, opts)
-
    
    description : to update many documents from [ database name/collection name ].
         
@@ -202,7 +201,6 @@ import QtQuick.MongoDB
 ```
    usage : findOne(database name  ,collection name  ,filter , opts)
 
-    
    description : to find one document from [ database name/collection name ].
         
    parameters :
@@ -238,7 +236,6 @@ import QtQuick.MongoDB
  
 ```
    usage : count(database name  ,collection name  ,filter , opts)
-
     
    description : count  all documents numbers from [ database name/collection name ].
    
@@ -258,7 +255,6 @@ import QtQuick.MongoDB
 ```
    usage :  aggregate(database name  ,collection name  ,pipeline , opts)
 
-    
    description : aggregation pipeline consists of stages and each stage transforms the document. Or in other words, the aggregation pipeline is a multi tage pipeline
    
    parameters:
