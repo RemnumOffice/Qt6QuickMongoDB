@@ -105,7 +105,7 @@ import QtQuick.MongoDB
           false for error.
 ```
 
-##### 4 .  Function name : updateOne
+  ##### 4 .  Function name : updateOne
  
 ```
    usage :
@@ -131,6 +131,7 @@ import QtQuick.MongoDB
 ```
    usage :
    updateMany(database name  ,collection name  ,selector,  update, opts)
+
    
    description :
         to update many documents from [ database name/collection name ].
@@ -212,7 +213,8 @@ import QtQuick.MongoDB
  
 ```
    usage :
-    findOne(database name  ,collection name  ,selector, update , opts)
+    findOne(database name  ,collection name  ,filter , opts)
+
     
    description :
         to find one document from [ database name/collection name ].
@@ -220,11 +222,11 @@ import QtQuick.MongoDB
    parameters :
           database name : string 
           collection name : string
-          selector : json object
+          filter : json object
           opts : json object
           
    return :
-           true  for success 
+           resutl of find in json object data
            false for error
 ```
 ##### 10 .  Function name : find
@@ -233,7 +235,8 @@ import QtQuick.MongoDB
    usage :
    find(database name  ,collection name  ,filter , opts)
     
-   description :
+   description : to find all documents from [ database name/collection name ].
+
    
    parameters:
           database name : string 
@@ -242,7 +245,7 @@ import QtQuick.MongoDB
           opts : json object
           
    return :
-           true  for success 
+           resutl of find in json object data
            false for error
 ```
 
@@ -251,8 +254,9 @@ import QtQuick.MongoDB
 ```
    usage :
    count(database name  ,collection name  ,filter , opts)
+
     
-   description :
+   description : count  all documents numbers from [ database name/collection name ].
    
    parameters:
           database name : string 
@@ -261,7 +265,7 @@ import QtQuick.MongoDB
           opts : json object
           
    return :
-           true  for success 
+           resutl of count in int data
            false for error
 ```
 
@@ -270,9 +274,9 @@ import QtQuick.MongoDB
 ```
    usage :
    aggregate(database name  ,collection name  ,pipeline , opts)
+
     
-   description :
-   
+   description :	[Markdown - [Link](http://mongoc.org/libmongoc/1.12.0/aggregate.html)](#http://mongoc.org/libmongoc/1.12.0/aggregate.html) 
    parameters:
           database name : string 
           collection name : string
@@ -286,29 +290,18 @@ import QtQuick.MongoDB
 
 
 
+## Contact
 
-<!--
-    bool insertOne(QString dbStr,QString collectionStr,QJSValue document,QJSValue opts);
+Ahmed El Banna  - ahbanna@gmail.com
 
-    bool updateOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
-    bool updateMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
-
-    bool deleteOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
-    bool deleteMany(QString dbStr,QString collectionStr, QJSValue selector, QJSValue opts);
+Linkedin : (https://www.linkedin.com/in/ahmed-el-banna-3a30324b)
 
 
+Abdalla yahya - abdallayahya158@gmail.com
 
-    bool replaceOne(QString dbStr,QString collectionStr, QJSValue selector, QJSValue update,QJSValue opts);
-
-
-    QVariant findOne(QString dbStr,QString collectionStr, QJSValue filter,QJSValue opts);
-    QVariant find(QString dbStr,QString collectionStr, QJSValue filter,QJSValue opts);
-    int count(QString dbStr,QString collectionStr, QJSValue filter,QJSValue opts);
-
-    QVariant aggregate(QString dbStr,QString collectionStr, QJSValue pipeline,QJSValue opts);
+Linkedin : (https://www.linkedin.com/in/abdalla-yahya-560a861b7/)
 
 
-    void connectDB();
-    void disConnectDB();
+Project Link: (https://github.com/RemnumOffice/Qt6QuickMongoDB)
 
--->
+
