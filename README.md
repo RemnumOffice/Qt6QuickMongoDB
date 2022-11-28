@@ -1,4 +1,4 @@
-_  <h2> Qt6QuickMongoDB </h2>
+  <h2> Qt6QuickMongoDB </h2>
 
 
 
