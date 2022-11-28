@@ -276,7 +276,8 @@ import QtQuick.MongoDB
    aggregate(database name  ,collection name  ,pipeline , opts)
 
     
-   description : 
+   description : aggregation pipeline consists of stages and each stage transforms the document. Or in other words, the aggregation pipeline is a multi stage pipeline
+   
    parameters:
           database name : string 
           collection name : string
@@ -287,7 +288,7 @@ import QtQuick.MongoDB
            true  for success 
            false for error
 ```
-##### See More About Aggregate [here]([myLib/README.md](https://github.com/RemnumOffice/Qt6QuickMongoDB/edit/main/README.md))
+##### See More About Aggregate [here](https://www.geeksforgeeks.org/aggregation-in-mongodb/)
 
 
 ## Contact
